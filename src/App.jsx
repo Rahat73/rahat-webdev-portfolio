@@ -2,12 +2,14 @@ import { Link, useLocation, useOutlet } from "react-router-dom";
 import "./App.css";
 import { Fragment } from "react";
 import { AnimatePresence } from "framer-motion";
+import PreLoader from "./PreLoader/PreLoader";
 
 function App() {
   const outlet = useOutlet();
   const location = useLocation();
   return (
-    <>
+    <div className="bg-slate-950 min-h-screen text-slate-100">
+      <PreLoader />
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <div className=" space-x-4">
         <Link to={"/"}>Home</Link>
@@ -20,7 +22,7 @@ function App() {
       <AnimatePresence mode="wait">
         <Fragment key={location.pathname}>{outlet}</Fragment>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
