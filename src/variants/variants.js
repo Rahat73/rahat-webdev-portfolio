@@ -24,7 +24,7 @@ const childVariant = {
 
 const parentVariant1 = {
   hidden: {
-    scaleX: 0,
+    scaleY: 0,
     transition: {
       when: "afterChildren",
       staggerChildren: 0.05,
@@ -32,16 +32,36 @@ const parentVariant1 = {
     },
   },
   visible: {
-    scaleX: 1,
+    scaleY: 1,
     transition: {
-      // when: "beforeChildren",
+      when: "beforeChildren",
       staggerChildren: 0.05,
     },
   },
 };
 const childVariant1 = {
-  hidden: { scaleX: 0, transition: { duration: 1.25, ease: "anticipate" } },
-  visible: { scaleX: 1, transition: { duration: 1.25, ease: "anticipate" } },
+  hidden: { scaleY: 0, transition: { duration: 1.25, ease: "anticipate" } },
+  visible: { scaleY: 1, transition: { duration: 1.25, ease: "anticipate" } },
 };
 
-export { parentVariant, childVariant, parentVariant1, childVariant1 };
+const blobVariant = {
+  animate: {
+    scaleX: 3,
+    scaleY: 1.5,
+    // x: "50vw",
+    transition: {
+      duration: 10,
+      repeat: Infinity,
+      repeatType: "mirror",
+      ease: "linear",
+    },
+  },
+};
+
+export {
+  parentVariant,
+  childVariant,
+  parentVariant1,
+  childVariant1,
+  blobVariant,
+};
