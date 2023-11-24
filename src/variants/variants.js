@@ -27,7 +27,7 @@ const parentVariant1 = {
     scaleY: 0,
     transition: {
       when: "afterChildren",
-      staggerChildren: 0.05,
+      staggerChildren: 0.03,
       staggerDirection: -1,
     },
   },
@@ -35,33 +35,13 @@ const parentVariant1 = {
     scaleY: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.05,
+      staggerChildren: 0.03,
     },
   },
 };
 const childVariant1 = {
-  hidden: { scaleY: 0, transition: { duration: 1.25, ease: "anticipate" } },
-  visible: { scaleY: 1, transition: { duration: 1.25, ease: "anticipate" } },
+  hidden: { scaleY: 0, transition: { duration: 0.75, ease: "anticipate" } },
+  visible: { scaleY: 1, transition: { duration: 0.75, ease: "anticipate" } },
 };
 
-const blobVariant = {
-  animate: {
-    scaleX: 3,
-    scaleY: 1.5,
-    // x: "50vw",
-    transition: {
-      duration: 10,
-      repeat: Infinity,
-      repeatType: "mirror",
-      ease: "linear",
-    },
-  },
-};
-
-export {
-  parentVariant,
-  childVariant,
-  parentVariant1,
-  childVariant1,
-  blobVariant,
-};
+export { parentVariant, childVariant, parentVariant1, childVariant1 };

@@ -7,7 +7,7 @@ const PreLoader = () => {
         initial={{ x: 0 }}
         animate={{ x: "-101vw" }}
         transition={{ delay: 3 }}
-        className="fixed top-0 left-0 w-full h-screen bg-slate-950 z-30"
+        className="fixed top-0 left-0 w-full h-screen bg-slate-950 z-40"
       >
         <motion.div
           variants={parentVariant}
@@ -28,13 +28,13 @@ const PreLoader = () => {
         initial={{ x: "100vw" }}
         animate={{ x: "-101vw" }}
         transition={{ delay: 1.75, duration: 2.25, ease: "anticipate" }}
-        className="fixed top-0 left-0 w-full h-screen bg-slate-900 z-30"
+        className="fixed top-0 left-0 w-full h-screen bg-slate-900 z-40"
       ></motion.div>
       <motion.div
         initial={{ x: "100vw" }}
         animate={{ x: "-101vw" }}
         transition={{ delay: 2, duration: 2.25, ease: "anticipate" }}
-        className="fixed top-0 left-0 w-full h-screen bg-slate-800 z-30"
+        className="fixed top-0 left-0 w-full h-screen bg-rose-900 z-40"
       ></motion.div>{" "}
     </>
   );

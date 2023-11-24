@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { childVariant1, parentVariant1 } from "../variants/variants";
 
-const Row = () => (
+const Column = () => (
   <motion.div
     variants={childVariant1}
-    className="bg-slate-900 min-h-full origin-top border-r border-stone-100 border-opacity-10"
+    className="bg-slate-900 min-h-full origin-top border-r border-rose-300 border-opacity-10"
   ></motion.div>
 );
 
@@ -19,18 +19,18 @@ const Transition = ({ children }) => {
         exit="visible"
         className="fixed top-0 left-0 w-full origin-top grid grid-cols-12 h-screen"
       >
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
       </motion.div>
       <motion.div
         variants={parentVariant1}
@@ -39,18 +39,18 @@ const Transition = ({ children }) => {
         exit="hidden"
         className="fixed top-0 left-0 w-full origin-top grid grid-cols-12 h-screen"
       >
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
-        <Row />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
+        <Column />
       </motion.div>
     </>
   );

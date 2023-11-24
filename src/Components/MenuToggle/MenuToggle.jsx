@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 const MenuToggle = ({ isMenuOpen }) => {
   return (
     <svg
-      width="23"
-      height="18"
-      viewBox="0 0 23 18"
+      width="40"
+      height="30"
+      viewBox="0 0 40 30"
       fill="transparent"
       strokeWidth="3"
       stroke="white"
-      strokeLinecap="round"
+      //   strokeLinecap="round"
     >
       <motion.path
         animate={
-          isMenuOpen ? { d: "M 3 16.5 L 17 2.5" } : { d: "M 2 2.5 L 20 2.5" }
+          isMenuOpen ? { d: "M 3 16.5 L 30 2.5" } : { d: "M 2 2.5 L 35 2.5" }
         }
       />
       <motion.path
@@ -23,8 +23,8 @@ const MenuToggle = ({ isMenuOpen }) => {
       <motion.path
         animate={
           isMenuOpen
-            ? { d: "M 3 2.5 L 17 16.346" }
-            : { d: "M 2 16.346 L 20 16.346" }
+            ? { d: "M 3 2.5 L 30 16.346" }
+            : { d: "M 2 16.346 L 35 16.346" }
         }
       />
     </svg>
