@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { childVariant1, parentVariant1 } from "../../variants/variants";
+import HoverText from "../../Components/HoverText/HoverText";
 
 const Column = () => (
   <motion.div
@@ -35,22 +36,22 @@ const NavPage = ({ setIsMenuOpen }) => {
         className="fixed h-full w-full flex flex-col justify-center items-center space-y-10 md:text-6xl font-semibold uppercase"
       >
         <Link to={"/"} onClick={() => setIsMenuOpen(false)}>
-          Home
+          <HoverText>Home</HoverText>
         </Link>
         <Link to={"/about-me"} onClick={() => setIsMenuOpen(false)}>
-          About Me
+          <HoverText>About Me</HoverText>
         </Link>
         <Link to={"/skills"} onClick={() => setIsMenuOpen(false)}>
-          Skills
+          <HoverText>Skills</HoverText>
         </Link>
         <Link to={"/projects"} onClick={() => setIsMenuOpen(false)}>
-          Projects
+          <HoverText>Projects</HoverText>
         </Link>
         <Link to={"/education"} onClick={() => setIsMenuOpen(false)}>
-          Education
+          <HoverText>Education</HoverText>
         </Link>
         <Link to={"/contact"} onClick={() => setIsMenuOpen(false)}>
-          Contact
+          <HoverText>Contact</HoverText>
         </Link>
       </motion.div>
     </motion.div>

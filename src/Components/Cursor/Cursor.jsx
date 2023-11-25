@@ -22,11 +22,11 @@ const Cursor = () => {
       //   transition: { duration: 0.1 },
     },
     textHover: {
-      height: 150,
-      width: 150,
-      backgroundColor: "blue",
-      x: mousePosition.x - 75,
-      y: mousePosition.y - 75,
+      height: 100,
+      width: 100,
+      backgroundColor: "rgb(0,0,255)",
+      x: mousePosition.x - 50,
+      y: mousePosition.y - 50,
       //   transition: { duration: 0.1 },
     },
   };

@@ -22,15 +22,11 @@ function App() {
       <AnimatePresence>
         {isMenuOpen && <NavPage setIsMenuOpen={setIsMenuOpen} />}
       </AnimatePresence>
-      <span
+
+      <div
+        className="fixed top-7 right-7 rounded-full z-30"
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
-        className=" text-6xl"
-      >
-        Hello World
-      </span>
-      <div
-        className="fixed top-7 right-7 rounded-full pointer-events-auto z-30"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <MenuToggle isMenuOpen={isMenuOpen} />
