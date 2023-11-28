@@ -24,7 +24,7 @@ const Cursor = () => {
     textHover: {
       height: 100,
       width: 100,
-      backgroundColor: "rgb(0,0,255)",
+      backgroundColor: "rgb(255 255 255)",
       x: mousePosition.x - 50,
       y: mousePosition.y - 50,
       //   transition: { duration: 0.1 },
@@ -35,7 +35,7 @@ const Cursor = () => {
     <motion.div
       variants={cursorVariant}
       animate={cursor}
-      className="w-[32px] h-[32px] rounded-full bg-rose-400 fixed top-0 left-0 z-30 pointer-events-none mix-blend-difference"
+      className="w-[32px] h-[32px] rounded-full bg-rose-400 fixed top-0 left-0 z-40 pointer-events-none mix-blend-difference"
     />
   );
 };

@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { childVariant1, parentVariant1 } from "../../variants/variants";
 import HoverText from "../../Components/HoverText/HoverText";
 
-const Column = () => (
+const Column = ({ className }) => (
   <motion.div
     variants={childVariant1}
-    className="bg-rose-950 min-h-full origin-top border-r border-rose-300 border-opacity-10"
+    className={`bg-rose-950 min-h-full origin-top border-r border-rose-300 border-opacity-10 ${className}`}
   ></motion.div>
 );
 
@@ -17,7 +17,7 @@ const NavPage = ({ setIsMenuOpen }) => {
       initial="hidden"
       animate="visible"
       exit="hidden"
-      className="fixed top-0 left-0 bottom-0 right-0 pointer-events-auto grid grid-cols-12 origin-top"
+      className="fixed top-0 left-0 bottom-0 right-0 pointer-events-auto grid grid-cols-6 md:grid-cols-12 origin-top z-30"
     >
       <Column />
       <Column />
@@ -25,12 +25,12 @@ const NavPage = ({ setIsMenuOpen }) => {
       <Column />
       <Column />
       <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
+      <Column className={"hidden md:block"} />
+      <Column className={"hidden md:block"} />
+      <Column className={"hidden md:block"} />
+      <Column className={"hidden md:block"} />
+      <Column className={"hidden md:block"} />
+      <Column className={"hidden md:block"} />
       <motion.div
         variants={childVariant1}
         className="fixed h-full w-full flex flex-col justify-center items-center space-y-10 md:text-6xl font-semibold uppercase"

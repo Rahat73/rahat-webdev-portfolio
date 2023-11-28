@@ -14,7 +14,7 @@ function App() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="min-h-screen text-rose-100 bg-slate-950 overflow-hidden font-Unbounded text-3xl">
+    <div className="min-h-screen text-white bg-slate-950 overflow-hidden font-Unbounded">
       <PreLoader />
       <Cursor />
       {/* <BackgroundGradient /> */}

@@ -5,12 +5,12 @@ const BackgroundGrid = () => {
   const divArray = Array.from({ length: numDivs }, (_, index) => index);
 
   return (
-    <div className="fixed top-0 left-0 bottom-0 right-0 grid grid-cols-12 pointer-events-none">
+    <div className="fixed top-0 left-0 bottom-0 right-0 grid grid-cols-6 md:grid-cols-12 pointer-events-none">
       {/* grid-cols-[repeat(auto-fit,_minmax(75px,_1fr))] grid-rows-[repeat(auto-fit,_minmax(75px,_1fr))] min-[2560px]:grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] min-[2560px]:grid-rows-[repeat(auto-fit,_minmax(150px,_1fr))] */}
       {divArray.map((index) => (
         <div
           key={index}
-          className="h-full w-full border border-rose-300 opacity-10 "
+          className="h-full w-full border border-y-0 border-rose-300 opacity-10 "
           // whileHover={{
           //   opacity: 0.5,
           //   transition: {

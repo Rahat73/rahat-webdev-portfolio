@@ -44,4 +44,15 @@ const childVariant1 = {
   visible: { scaleY: 1, transition: { duration: 0.75, ease: "anticipate" } },
 };
 
-export { parentVariant, childVariant, parentVariant1, childVariant1 };
+const textRevealVariant = {
+  hidden: { scaleX: 0 },
+  visible: { scaleX: 1, transition: { delay: 4, duration: 0.5 } },
+};
+
+export {
+  parentVariant,
+  childVariant,
+  parentVariant1,
+  childVariant1,
+  textRevealVariant,
+};
