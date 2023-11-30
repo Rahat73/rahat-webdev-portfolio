@@ -19,7 +19,7 @@ const Cursor = () => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      //   transition: { duration: 0.1 },
+      transition: { duration: 0.1 },
     },
     textHover: {
       height: 100,
@@ -27,7 +27,7 @@ const Cursor = () => {
       backgroundColor: "rgb(255 255 255)",
       x: mousePosition.x - 50,
       y: mousePosition.y - 50,
-      //   transition: { duration: 0.1 },
+      transition: { duration: 0.1 },
     },
   };
 

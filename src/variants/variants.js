@@ -44,9 +44,29 @@ const childVariant1 = {
   visible: { scaleY: 1, transition: { duration: 0.75, ease: "anticipate" } },
 };
 
-const textRevealVariant = {
-  hidden: { scaleX: 0 },
-  visible: { scaleX: 1, transition: { delay: 4, duration: 0.5 } },
+const textRevealParentVariant = {
+  hidden: {
+    scale: 0,
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+      delayChildren: 0.2,
+    },
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.07,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const textRevealChildVariant = {
+  hidden: { y: "-5vh", opacity: 0 },
+  visible: { y: 0, opacity: 1 },
 };
 
 export {
@@ -54,5 +74,6 @@ export {
   childVariant,
   parentVariant1,
   childVariant1,
-  textRevealVariant,
+  textRevealParentVariant,
+  textRevealChildVariant,
 };
