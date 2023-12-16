@@ -17,7 +17,7 @@ const Transition = ({ children }) => {
         initial="hidden"
         animate="hidden"
         exit="visible"
-        className="fixed top-0 left-0 w-full origin-top grid grid-cols-6 md:grid-cols-12 h-screen"
+        className="fixed top-0 left-0 w-full origin-top grid grid-cols-6 md:grid-cols-12 h-screen z-30"
       >
         <Column />
         <Column />
@@ -37,7 +37,7 @@ const Transition = ({ children }) => {
         initial="visible"
         animate="hidden"
         exit="hidden"
-        className="fixed top-0 left-0 w-full origin-top grid grid-cols-6 md:grid-cols-12 h-screen"
+        className="fixed top-0 left-0 w-full origin-top grid grid-cols-6 md:grid-cols-12 h-screen z-30"
       >
         <Column />
         <Column />

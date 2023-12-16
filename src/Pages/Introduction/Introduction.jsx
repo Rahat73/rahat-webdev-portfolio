@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import Transition from "../../Transition/Transition";
 import animation from "../../assets/developer-animation.json";
 import HoverText from "../../Components/HoverText/HoverText";
+import { FaArrowRightLong } from "react-icons/fa6";
 import {
   textRevealParentVariant,
   textRevealChildVariant,
 } from "../../variants/variants";
+import { Link } from "react-router-dom";
 
 const Introduction = () => {
   return (
@@ -175,6 +177,25 @@ const Introduction = () => {
               </span>{" "}
               web applications <br />
               that ensures great user experience.
+            </motion.div>
+            <motion.div
+              variants={textRevealChildVariant}
+              className="space-x-20 my-5 flex"
+            >
+              <Link
+                to={"/projects"}
+                className="text-rose-400 underline flex items-center space-x-2 cursor-none"
+              >
+                <HoverText>see my projects</HoverText>
+                <FaArrowRightLong />
+              </Link>
+              <Link
+                to={"/about-me"}
+                className="text-rose-400 underline flex items-center space-x-2 cursor-none"
+              >
+                <HoverText>more about me</HoverText>
+                <FaArrowRightLong />
+              </Link>
             </motion.div>
           </motion.div>
         </div>

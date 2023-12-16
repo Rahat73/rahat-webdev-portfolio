@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { childVariant1, parentVariant1 } from "../../variants/variants";
+import {
+  childVariant1,
+  navMenuChildVariant,
+  navMenuParentVariant,
+  parentVariant1,
+} from "../../variants/variants";
 import HoverText from "../../Components/HoverText/HoverText";
 
 const Column = ({ className }) => (
@@ -32,27 +37,39 @@ const NavPage = ({ setIsMenuOpen }) => {
       <Column className={"hidden md:block"} />
       <Column className={"hidden md:block"} />
       <motion.div
-        variants={childVariant1}
-        className="fixed h-full w-full flex flex-col justify-center items-center space-y-10 md:text-6xl font-semibold uppercase"
+        variants={navMenuParentVariant}
+        className="fixed h-full w-full flex flex-col justify-center items-center space-y-10 md:text-6xl font-semibold uppercase origin-top"
       >
-        <Link to={"/"} onClick={() => setIsMenuOpen(false)}>
-          <HoverText>Home</HoverText>
-        </Link>
-        <Link to={"/about-me"} onClick={() => setIsMenuOpen(false)}>
-          <HoverText>About Me</HoverText>
-        </Link>
-        <Link to={"/skills"} onClick={() => setIsMenuOpen(false)}>
-          <HoverText>Skills</HoverText>
-        </Link>
-        <Link to={"/projects"} onClick={() => setIsMenuOpen(false)}>
-          <HoverText>Projects</HoverText>
-        </Link>
-        <Link to={"/education"} onClick={() => setIsMenuOpen(false)}>
-          <HoverText>Education</HoverText>
-        </Link>
-        <Link to={"/contact"} onClick={() => setIsMenuOpen(false)}>
-          <HoverText>Contact</HoverText>
-        </Link>
+        <motion.div variants={navMenuChildVariant}>
+          <Link to={"/"} onClick={() => setIsMenuOpen(false)}>
+            <HoverText>Home</HoverText>
+          </Link>
+        </motion.div>
+        <motion.div variants={navMenuChildVariant}>
+          <Link to={"/about-me"} onClick={() => setIsMenuOpen(false)}>
+            <HoverText>About Me</HoverText>
+          </Link>
+        </motion.div>
+        <motion.div variants={navMenuChildVariant}>
+          <Link to={"/skills"} onClick={() => setIsMenuOpen(false)}>
+            <HoverText>Skills</HoverText>
+          </Link>
+        </motion.div>
+        <motion.div variants={navMenuChildVariant}>
+          <Link to={"/projects"} onClick={() => setIsMenuOpen(false)}>
+            <HoverText>Projects</HoverText>
+          </Link>
+        </motion.div>
+        <motion.div variants={navMenuChildVariant}>
+          <Link to={"/education"} onClick={() => setIsMenuOpen(false)}>
+            <HoverText>Education</HoverText>
+          </Link>
+        </motion.div>
+        <motion.div variants={navMenuChildVariant}>
+          <Link to={"/contact"} onClick={() => setIsMenuOpen(false)}>
+            <HoverText>Contact</HoverText>
+          </Link>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

@@ -5,6 +5,7 @@ const HoverText = ({ children }) => {
     <span
       onMouseEnter={textEnter}
       onMouseLeave={textLeave}
+      onMouseUp={textLeave}
       className="cursor-none"
     >
       {children}
